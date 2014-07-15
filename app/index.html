@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!--<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" type="text/css" />-->
+        <link href="//cdnjs.cloudflare.com/ajax/libs/semantic-ui/0.16.1/css/semantic.css" rel="stylesheet" type="text/css" />
+        <link href="/demo/app/css/app.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body ng-app="app">
+
+        <div ng-controller="searchController">
+            <!-- Search Input -->
+            <div id="" class="ui massive icon input">
+                <input type="text" placeholder="San Francisco, CA" ng-model="searchTerm" value="{{searchTerm}}">
+                <i class="search icon" ng-click="search()"></i>
+            </div>
+
+            <!-- Search Results -->
+            <div>
+                <p>{{city.name}}</p>
+                <p>{{city.temperature}}</p>
+            </div>
+        </div>
+
+        <div class="map" ng-controller="mapController">
+            <div google-map center="map.center" zoom="map.zoom" pan="map.pan"></div>
+
+        </div>
+    </body>
+
+    <!-- jQuery -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+    <!-- Google Maps -->
+    <script src='//maps.googleapis.com/maps/api/js?sensor=false'></script>
+    <script src='//cdnjs.cloudflare.com/ajax/libs/lodash.js/2.4.1/lodash.underscore.js'></script>
+
+    <!-- Angular -->
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular.min.js"></script>
+
+    <!-- Google Map Directive -->
+    <script src="//cdn.jsdelivr.net/angular.google-maps/1.1.0/angular-google-maps.min.js"></script>
+
+    <!-- Bootstrap Directive -->
+    <!--<script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.10.0/ui-bootstrap.min.js"></script>-->
+
+    <!-- Semantic UI -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/semantic-ui/0.16.1/javascript/semantic.min.js"></script>
+
+    <!-- App -->
+    <script src="/demo/app/js/app.js"></script>
+</html>
